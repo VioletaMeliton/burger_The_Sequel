@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Burger Time</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Welcome to Delicious Burgers!!!!!</h1>
+        <div class="jumbotron">
+            <img src="/assets/img/burger.png" alt="burger_image">
+            
+        </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                <form action="/burger/add" method="post">
+                    <label for="new_burger" class="request">Place your order below!</label>
+                    <textarea class="form-control" columns="8" rows="2" id="new_burger" name="burger_name"></textarea>
+
+                    <button id="submit-button" type="submit" class="btn btn-primary">Place Order</button>
+                </form>
+                    <form action="/burger/delete" method="post">
+                        <button id="delete-button" type="submit" class="btn btn-danger">Delete All Burgers</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+
+                    {{{ body }}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+<script src="assets/javascript/script.js"></script>
+
+</html>

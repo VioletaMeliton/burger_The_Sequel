@@ -1,0 +1,40 @@
+#submit-button{
+    margin: 5%;
+}
+
+textarea{
+    max-width: 400px;
+}
+
+img{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+body{
+    font-family: 'Baloo', 'arial' ,cursive;
+}
+
+.panel-heading{
+    width: 100%;
+    font-size: large;
+}
+
+.request{
+    font-size: large;
+}
+.red{
+    color:red;
+}
+.green{
+    color:green;
+}
+
+thead{
+    background-color: azure;
+}
+
+#delete-button{
+    margin-left: 5%;
+}

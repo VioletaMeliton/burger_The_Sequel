@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Burgers ready for Devour</div>
+
+        <!-- Table -->
+        <table class="table">
+            <thead>
+            <th>id</th>
+            <th>burger_name</th>
+            <th>devoured</th>
+            <th>Consume</th>
+            </thead>
+            <tbody>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <tr>
+                        <form action="burger/eat/{{id}}" method="POST">
+                            <th scope="row" class="green">{{this.id}}</th>
+                            <th class="green">{{this.burger_name}}</th>
+                            <th class="green ">{{this.devoured}}</th>
+                           
+                            <th>
+                                <button id="{{this.id}}" type="submit" class="btn btn-primary">Devour Me!</button>
+                            </th>
+                        </form>
+                    </tr>
+                {{/unless}}
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="panel panel-danger">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Devoured Burgers</div>
+
+        <!-- Table -->
+        <table class="table">
+            <thead>
+            <th>id</th>
+            <th>burger_name</th>
+            <th>devoured</th>
+        
+
+            </thead>
+            <tbody>
+            {{#each burgers}}
+                {{#if devoured}}
+                    <tr>
+                        <th scope="row" class="red">{{this.id}}</th>
+                        <th class="red">{{this.burger_name}}</th>
+                        <th class="red">{{this.devoured}}</th>
+                       
+                    </tr>
+                {{/if}}
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
